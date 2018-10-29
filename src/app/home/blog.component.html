@@ -1,0 +1,20 @@
+<div class="d-flex flex-column bd-highlight mb-3">
+    <div class="p-2 bd-highlight">
+        <ul>
+            <li *ngFor="let change of changeLog" [ngStyle]="{'color':change.color}">
+             <div class="title-heading">{{change.title}}</div>
+              <div>
+                <p class="blog-date">{{change.month + ' ' +change.day + ', ' + change.year}}</p>
+              </div>
+              <div class="blog-divider" [innerHTML]="change.detail">
+              </div>
+             
+            </li>
+          </ul>
+    </div>
+  </div>
+
+  <ngx-md>
+    ## Markdown h2 content
+    </ngx-md>
+ 

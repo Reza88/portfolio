@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Gudea');
+
+body{
+    background: #23252D !important;
+    font-family:Gudea;
+}
+.container{
+    color:white;
+}
+
+.smallerImg{
+    width:10%;
+}
+a{
+    color:#1178B3
+}
+
+i:hover{
+    color:white !important;
+}
+
+.navColor{  
+    font-weight:bold;
+    color:white !important;
+}
+
+.nav-item-padding{
+    padding:7px
+}
+
+.projectHeading{
+    font-size:24px;
+    font-family: 'Gudea', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.spacer{
+    margin:2px;
+}
+
+.sub-heading{
+    font-size:12px;
+}
+ul{
+    list-style: none; 
+    padding:0px;
+}
+.blog-divider{
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px; margin:  10px 0px  10px 0px;
+    padding-top:10px; 
+    }
+    ul{
+        list-style: none; 
+    }
+.title-heading{
+    color:white; 
+    font-size:24px; 
+    font-weight: bold;
+    }
+.blog-date{
+    color:#1178B3 !important; 
+    font-size: 16px; 
+    }
