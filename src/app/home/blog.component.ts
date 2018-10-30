@@ -1,5 +1,6 @@
 import { ChangeLog } from '../../models/changelog.interface';
 import { Component, OnInit, ElementRef } from '@angular/core';
+import {ViewEncapsulation} from '@angular/core'; 
 
 @Component({
   selector: 'app-blog',
@@ -14,13 +15,6 @@ export class BlogComponent implements OnInit {
   constructor(private elementRef: ElementRef) {
 
   }
-  ngAfterContentInit() {
-    const tmp = document.createElement('div');
-    const el = this.elementRef.nativeElement.cloneNode(true);
-
-    tmp.appendChild(el);
-    this.node = tmp.innerHTML;
-  }
 
   public ngOnInit():void {
     this.changeLog = [ {
@@ -29,11 +23,15 @@ export class BlogComponent implements OnInit {
       day:2,
       year:2018,
       title:'Updated projects/blog section', 
-      detail:`
-      <code>function greet(){
-        console.log('hello'); 
-      }</code>
-  `
+      detail:`<pre><code class="javascript">
+      $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+      </code></pre> 
+      <p>This is normal</p>
+      `
    },{
       color:'#ffffff',
       month:'May',

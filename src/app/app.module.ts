@@ -2,15 +2,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {SafeHtmlPipe} from "./pipes/safe.html.pipe";
+
+
 
 import { AppComponent } from './app.component';
 import { BlogComponent } from './home/blog.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ArticleComponent } from './article/article.component';
-
-import { HighlightJsModule } from 'ngx-highlight-js';
-import { NgxMdModule } from 'ngx-md'; 
-
 
 
 @NgModule({
@@ -18,15 +17,15 @@ import { NgxMdModule } from 'ngx-md';
     AppComponent,
     ProjectsComponent,
     BlogComponent,
-    ArticleComponent
+    ArticleComponent,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HighlightJsModule,
-    NgxMdModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[ BlogComponent]
 })
 export class AppModule { }

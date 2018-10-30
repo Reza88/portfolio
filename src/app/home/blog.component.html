@@ -6,15 +6,11 @@
               <div>
                 <p class="blog-date">{{change.month + ' ' +change.day + ', ' + change.year}}</p>
               </div>
-              <div class="blog-divider" [innerHTML]="change.detail">
-              </div>
-             
+              <div class="blog-divider" [innerHTML]= "change.detail | safeHtml">
+              </div>    
             </li>
           </ul>
     </div>
   </div>
-
-  <ngx-md>
-    ## Markdown h2 content
-    </ngx-md>
  
+  
