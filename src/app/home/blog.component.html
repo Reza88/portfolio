@@ -1,3 +1,4 @@
+<script>hljs.initHighlightingOnLoad();</script>
 <div class="d-flex flex-column bd-highlight mb-3">
     <div class="p-2 bd-highlight">
         <ul>
@@ -6,11 +7,11 @@
               <div>
                 <p class="blog-date">{{change.month + ' ' +change.day + ', ' + change.year}}</p>
               </div>
-              <div class="blog-divider" [innerHTML]= "change.detail | safeHtml">
-              </div>    
+              <div class="blog-divider code-block" appHighlightJs [innerHTML]="change.detail| safeHtml">
+
+              </div>
             </li>
           </ul>
     </div>
   </div>
- 
   
