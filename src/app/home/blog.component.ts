@@ -28,7 +28,7 @@ export class BlogComponent implements OnInit {
 
       <p>
       Change detection occurs whenever the DOM is updated with data. There are two different 
-      types of strategies angular provides us. The first of which is the <i>default strategy</i>. In short, 
+      types of strategies angular provides us. The first of which is the <b><i>default strategy</i></b>. In short, 
       the default strategy is propogated by ANY change or mutation of data. At this point Angular
       will run the change detector and update the DOM accordingly. The <b><i>onPush strategy</i></b> in comparison
       runs the change detector whenever a new <i>reference (Object, Array...)</i> is passed to @Input() data. 
