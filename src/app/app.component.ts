@@ -1,5 +1,10 @@
 import { Portfolio } from './../models/portfolio.interface';
 import { Component,OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import 'rxjs/add/operator/distinctUntilChanged'; 
+
+
+declare var gtag:Function; 
 
 @Component({
   selector: 'app-root',
@@ -10,7 +15,19 @@ export class AppComponent implements OnInit {
   public portfolio:Portfolio;
   public logOpen: boolean;
 
+  constructor(private router:Router){}
+
   public ngOnInit():void{
+      this.router.events.distinctUntilChanged((previous:any,current: any)=>{
+        //subscribe to any `Navigation` events where the url has changed. 
+        if(current instanceof NavigationEnd){
+          return previous.url ===current.url; 
+        }
+        return true; 
+      }).subscribe((x:any)=>{
+          gtag('config', 'UA-129511618-1');
+      }); 
+
       this.portfolio = {
         firstName:'Ali',
         lastName:'Farmani',
